@@ -4,10 +4,14 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-export function Layout({ children }: LayoutProps) {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <main className="min-h-screen bg-gray-50">
-      {children}
-    </main>
+    <div className="min-h-screen bg-gray-100">
+      <main className="container mx-auto px-4 py-8">
+        {children}
+      </main>
+    </div>
   );
-} 
+};
+
+export default Layout; 
